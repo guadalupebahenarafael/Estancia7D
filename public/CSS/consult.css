@@ -1,0 +1,357 @@
+/* ============================================================
+   DISEÑO MINIMALISTA MODERNO — PALETA SUAVE PERSONALIZADA
+   #FFF7F4 | #F4C0C0 | #5E948C | #003A2E
+============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ------------ FONDO ANIMADO FUTURISTA MINIMALISTA ------------ */
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #FFF7F4, #F4C0C0, #5E948C, #003A2E);
+    background-size: 300% 300%;
+    animation: bgFuturistic 18s ease-in-out infinite;
+    color: #003A2E;
+    padding: 25px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* ------------ TÍTULOS ------------ */
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #003A2E;
+    font-weight: 600;
+}
+
+/* ------------ CONTENEDORES GENERALES (LOGIN, CRUD, ETC.) ------------ */
+
+.container, main, .card {
+    width: 95%;
+    max-width: 720px;
+    margin: 35px auto;
+    padding: 25px;
+    background: #ffffffaa;
+    border-radius: 12px;
+    border: 1px solid #F4C0C0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* ------------ FORMULARIOS ------------ */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+label {
+    font-size: 15px;
+    color: #003A2E;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Inputs y selects minimalistas */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #5E948C;
+    border-radius: 8px;
+    background: white;
+    color: #003A2E;
+    transition: 0.25s;
+}
+
+/* Hover y focus */
+input:focus, select:focus, textarea:focus {
+    border-color: #003A2E;
+    box-shadow: 0 0 6px #5E948C;
+    outline: none;
+}
+
+/* ------------ SELECT / COMBOBOX ------------ */
+
+select {
+    background: white;
+    color: #003A2E;
+}
+
+select option {
+    background: white;
+    color: #003A2E;
+}
+
+select option:hover {
+    background: #F4C0C0;   /* rosado suave */
+}
+
+/* ------------ BOTONES DE TAMAÑO UNIFORME ------------ */
+
+button, 
+input[type="submit"], 
+a.button {
+    background: #003A2E;          
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+
+    /* NUEVO: tamaño uniforme */
+    width: 250px;              /* <-- Ajusta aquí si quieres más grande o más chico */
+    height: 45px;              /* <-- Altura fija */
+    display: flex;             /* permite centrar el texto */
+    justify-content: center;   /* centra horizontal */
+    align-items: center;       /* centra vertical */
+
+    margin: 0 auto;            /* centrar el botón */
+    transition: 0.25s;
+}
+
+/* Hover */
+button:hover, 
+input[type="submit"]:hover, 
+a.button:hover {
+    background: #5E948C;
+}
+
+
+button:hover, input[type="submit"]:hover, a.button:hover {
+    background: #5E948C;       /* verde grisáceo */
+}
+
+/* ------------ TABLAS CRUD ------------ */
+
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    margin-top: 25px;
+    border: 1px solid #F4C0C0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background: #5E948C;
+}
+
+th {
+    padding: 12px;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 12px;
+    color: #003A2E;
+    border-bottom: 1px solid #F4C0C0;
+}
+
+tbody tr:hover {
+    background: #F4C0C0;
+}
+
+/* ------------ ENLACES ------------ */
+
+a {
+    text-decoration: none;
+    color: #003A2E;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ------------ LISTAS DEL DASHBOARD ------------ */
+
+ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+ul li {
+    margin-bottom: 12px;
+}
+
+@keyframes bgFuturistic {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.logo-fixed {
+    width: 120px !important;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+}
+
+.logo-elegante {
+    width: 110px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    
+    /* Estética */
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 12px rgba(0, 255, 180, 0.7),
+                0 0 25px rgba(0, 180, 255, 0.4);
+    border: 2px solid rgba(0, 255, 255, 0.6);
+    
+    /* Animación inicial */
+    animation: neonPulse 4s ease-in-out infinite;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover elegante */
+.logo-elegante:hover {
+    transform: scale(1.18) rotate(2deg);
+    box-shadow: 
+        0 0 20px rgba(0, 255, 255, 0.9),
+        0 0 40px rgba(0, 150, 255, 0.7),
+        0 0 55px rgba(0, 255, 180, 0.8);
+    border-color: rgba(0, 255, 255, 1);
+}
+
+/* Animación suave de respiración */
+@keyframes neonPulse {
+    0% {
+        box-shadow:
+            0 0 12px rgba(0, 255, 180, 0.7),
+            0 0 22px rgba(0, 255, 255, 0.4);
+        transform: translateY(0px);
+    }
+    50% {
+        box-shadow:
+            0 0 20px rgba(0, 255, 255, 1),
+            0 0 35px rgba(0, 180, 255, 0.7);
+        transform: translateY(-3px);
+    }
+    100% {
+        box-shadow:
+            0 0 12px rgba(0, 255, 180, 0.7),
+            0 0 22px rgba(0, 255, 255, 0.4);
+        transform: translateY(0px);
+    }
+}
+
+/* Contenedor centrado */
+.logo-login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+/* Logo principal con efecto elegante */
+.logo-login {
+    width: 120px; /* Ajusta tu tamaño */
+    
+    padding: 15px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+
+    border: 3px solid rgba(0, 255, 255, 0.35);
+    box-shadow:
+        0 0 12px rgba(0, 255, 255, 0.45),
+        0 0 25px rgba(0, 180, 255, 0.35),
+        inset 0 0 10px rgba(0, 255, 255, 0.25);
+
+    animation: holograma 6s ease-in-out infinite;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover suave */
+.logo-login:hover {
+    transform: scale(1.1);
+    box-shadow:
+        0 0 18px rgba(0, 255, 255, 0.9),
+        0 0 38px rgba(0, 180, 255, 0.7),
+        inset 0 0 15px rgba(0, 255, 255, 0.35);
+}
+
+/* Animación holográfica */
+@keyframes holograma {
+    0% {
+        transform: translateY(0px);
+        filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.4));
+    }
+    50% {
+        transform: translateY(-6px);
+        filter: drop-shadow(0 0 18px rgba(0, 255, 255, 0.8));
+    }
+    100% {
+        transform: translateY(0px);
+        filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.4));
+    }
+}
+
+/* Contenedor de acciones */
+td.acciones {
+    display: flex;
+    justify-content: center;
+    gap: 12px;            /* separación entre botones */
+    padding: 10px 0;
+}
+
+/* Botones generales */
+.btn-accion {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+    transition: .25s ease-in-out;
+}
+
+/* Botón Editar */
+.btn-accion.editar {
+    background-color: #0d5e4d;
+    box-shadow: 0 0 10px rgba(0, 255, 200, 0.3);
+}
+.btn-accion.editar:hover {
+    background-color: #12816d;
+    box-shadow: 0 0 15px rgba(0, 255, 200, 0.7);
+    transform: scale(1.05);
+}
+
+/* Botón Eliminar */
+.btn-accion.eliminar {
+    background-color: #8b1a1a;
+    box-shadow: 0 0 10px rgba(255, 80, 80, 0.4);
+}
+.btn-accion.eliminar:hover {
+    background-color: #b42020;
+    box-shadow: 0 0 15px rgba(255, 80, 80, 0.7);
+    transform: scale(1.05);
+}
+
