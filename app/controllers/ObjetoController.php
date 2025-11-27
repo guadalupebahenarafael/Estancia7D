@@ -50,7 +50,7 @@ class ObjetoController
 
             // Validación
             if ($nombre === '' || $categoria === '' || $ID_Area <= 0 ||
-                $caracteristicas === '' || $marca === '') {
+                $caracteristicas === '') {
 
                 $this->alertRedirect(
                     "Todos los campos son obligatorios.",
@@ -128,7 +128,7 @@ class ObjetoController
             if (
                 $ID_Objeto <= 0 || $nombre === '' || $categoria === '' ||
                 $ID_Area <= 0 || $recuperado === '' ||
-                $caracteristicas === '' || $marca === '' || $genero === ''
+                $caracteristicas === '' || $genero === ''
             ) {
                 $this->alertRedirect(
                     "Todos los campos son obligatorios.",

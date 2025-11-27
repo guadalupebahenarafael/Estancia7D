@@ -1,5 +1,4 @@
 <?php 
-//AAAAAAAAAAAAAAAAA
 /*------------------------------------------------------------
  | Importación de Controladores y Dependencias principales
  *-----------------------------------------------------------*/
